@@ -3,10 +3,10 @@
 import cv2 as cv
 import numpy as np
 
-# def mouse_callback(event, x, y, flags, param):
-#     if event == 1:
-#         print('B: ', param[y][x][0], '\nG: ', param[y][x][1], '\nR: ', param[y][x][2])
-#         print('=================================')
+def mouse_callback(event, x, y, flags, param):
+    if event == 1:
+        print('B: ', param[y][x][0], '\nG: ', param[y][x][1], '\nR: ', param[y][x][2])
+        print('=================================')
 
 Path = './Data/'
 Name = 'rabong2.jpg'
@@ -46,5 +46,6 @@ print("위치:",p,"사분면")
 print("크기:",img.shape)
 
 #이미지 출력하기
-cv.imshow('result', img)
-cv.waitKey()
+cv.imshow('img', img)
+while cv.waitKey(33) <= 0:
+    cv.setMouseCallback('img', mouse_callback, img)
