@@ -24,7 +24,7 @@ cv.imshow('Original', img)
 
 # ==================== 평균값 필터 ====================
 # **** 실습 3) 직접 평균값 필터를 만들어 제공된 영상에 컨볼루션 연산 적용하기 ****
-# blurfilter = np.array()
+# blurfilter = np.array() #1/9로 나눈 필터 적용(넘파이)
 #
 # blurimg = cv.filter2D(img, -1, blurfilter)
 # cv.imshow('blurimg', blurimg)
@@ -91,13 +91,13 @@ cv.imshow('Original', img)
 
 
 # ==================== 샤프닝 ====================
-# **** 실습 5) 직접 샤프닝 필터를 만들어 제공된 영상에 컨볼루션 연산 적용하기 ****
-# sharpfilter = np.array()
-#
-# sharp_img = cv.filter2D(img, -1, sharpfilter)
-#
-# cv.imshow('sharpimg', sharp_img)
-#
-# cv.waitKey()
-# exit()
+#**** 실습 5) 직접 샤프닝 필터를 만들어 제공된 영상에 컨볼루션 연산 적용하기 ****
+sharpfilter = np.array()
+
+sharp_img = cv.filter2D(img, -1, sharpfilter)
+
+cv.imshow('sharpimg', sharp_img)
+
+cv.waitKey()
+exit()
 # ==================================================

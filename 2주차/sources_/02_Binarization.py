@@ -41,19 +41,19 @@ exit()
 
 
 # =========== 전역 이진화 (고정 임계값, 함수 사용) ===========
-# cv2.threshold(src, thresh, maxval, type)
-#   src : 입력 영상
-#   thresh : 임계값
-#   maxval : 임계값보다 클 때 적용되는 최대 값
-#   type : 임계값 적용 방법
-#     cv2.THRESH_BINARY : 픽셀 값이 thresh보다 크면 maxval, 작으면 0으로 할당
-# ==================================================
+#cv.threshold(src, thresh, maxval, type)
+  # src : 입력 영상
+  # thresh : 임계값
+  # maxval : 임계값보다 클 때 적용되는 최대 값
+  # type : 임계값 적용 방법
+  #   cv2.THRESH_BINARY : 픽셀 값이 thresh보다 크면 maxval, 작으면 0으로 할당
+#==================================================
 # bin_img = img.copy()
 #
-# _, bin_img = cv.threshold(bin_img, 100, 255, cv.THRESH_BINARY)
+# bin_img = cv.threshold(bin_img, 100, 255, cv.THRESH_BINARY)
 # print(bin_img)
 #
-# cv.imshow('binarization 3', bin_img)
+# cv.imshow('bin_img', bin_img)
 # cv.waitKey()
 # ==================================================
 
